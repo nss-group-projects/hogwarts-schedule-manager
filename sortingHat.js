@@ -27,7 +27,7 @@ const sortingHat = (students) => {
     Slytherin: 0,
   };
 
-  for (let i = 0; i < students.length; i++) {
+  for (let i = 0; i < students; i++) {
     const student = students[i];
     const house = assignHouseToStudent(houseCounts);
     houseCounts[house] += 1;
@@ -44,13 +44,12 @@ const getSortedHouses = () => {
   for (const house of houses) {
     const houseObj = { name: house, students: [] };
     for (const student of sortedStudents) {
-      if (student.house == house) {
+      if ((student.house = house)) {
         houseObj.students.push(student);
       }
     }
-    sortedHouses.push(houseObj);
+    sortedHouse.push(houseObj);
   }
-  return sortedHouses;
 };
 
-module.exports = { sortingHat, getSortedHouses };
+module.exports = { getSortedHouses };

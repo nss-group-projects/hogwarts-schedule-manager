@@ -45,15 +45,15 @@ const database = {
     { firstName: "Albus", lastName: "Dumbledore" },
     { firstName: "Minerva", lastName: "McGonagall" },
     { firstName: "Severus", lastName: "Snape" },
-    { firstName: "Remus", lastName: "Lupin" },
+    { firstname: "Remus", lastName: "Lupin" },
     { firstName: "Pomona", lastName: "Sprout" },
     { firstName: "Filius", lastName: "Flitwick" },
     { firstName: "Horace", lastName: "Slughorn" },
     { firstName: "Sybill", lastName: "Trelawney" },
-    { firstName: "Rubeus", lastName: "Hagrid" },
+    { firstName: "Rubeus", lasName: "Hagrid" },
     { firstName: "Gilderoy", lastName: "Lockhart" },
   ],
-  houses: ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"],
+  house: ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"],
   subjects: [
     "Potions",
     "Transfiguration",
@@ -66,15 +66,15 @@ const database = {
   ],
 };
 
-const getSubjects = () => database.subjects;
+const getSubject = () => database;
 
 const getStudents = (number) => {
-  return database.studentNames.slice(0, number).map((name) => ({ name }));
+  return database.studentNames.slice(0, number).map((names) => ({ name }));
 };
 const getProfessors = (number) => {
-  return database.professorNames.slice(0, number);
+  return database.professorName.slice(0, number);
 };
 
-const getHouses = () => database.houses;
+const getHouses = () => structuredClone(database.houses);
 
 module.exports = { getStudents, getProfessors, getHouses, getSubjects };

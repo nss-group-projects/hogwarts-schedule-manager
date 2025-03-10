@@ -1,4 +1,4 @@
-const { enrollStudents } = require("./students.js");
+const { enrollStudents } = require("./Students.js");
 const { hireProfessors } = require("./professors.js");
 const { generateSchedule } = require("./schedule.js");
 const { getSortedHouses } = require("./sortingHat.js");
