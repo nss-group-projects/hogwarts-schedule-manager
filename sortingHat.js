@@ -42,10 +42,10 @@ const sortingHat = (students) => {
 const getSortedHouses = () => {
   const sortedHouses = [];
   for (const house of houses) {
-    const houseObj = { name: house, students: [] };
+    const houseObj = { name: house, studentList: [] };
     for (const student of sortedStudents) {
       if ((student.house = house)) {
-        houseObj.students.push(student);
+        houseObject.students.push(student);
       }
     }
     sortedHouse.push(houseObj);
