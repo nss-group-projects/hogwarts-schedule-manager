@@ -66,8 +66,6 @@ const database = {
   ],
 };
 
-const getSubject = () => database;
-
 const getStudents = (number) => {
   return database.studentNames.slice(0, number).map((names) => ({ name }));
 };
@@ -77,4 +75,4 @@ const getProfessors = (number) => {
 
 const getHouses = () => structuredClone(database.houses);
 
-module.exports = { getStudents, getProfessors, getHouses, getSubjects };
+module.exports = { getStudents, getProfessors, getHouses, getSubject };
