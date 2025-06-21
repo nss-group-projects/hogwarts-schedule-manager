@@ -1,4 +1,4 @@
-const { getStudents, getHouses } = require("./database.js");
+const { getStudents, getHouses } = require("/database");
 const { sortingHat } = require("./sortingHat.js");
 
 const houses = getHouses();
